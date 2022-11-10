@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charser="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Coustom Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="dropdown">
+        <input type="text" class="textbox" placeholder="Dropdown Menu" readonly>
+        <div class="option">
+            <div onclick="show('HTML')"> HTML</div>
+            <div onclick="show('CSS')">CSS</div>
+            <div onclick="show('Jvascript')">Javascript</div>
+            <div onclick="show('Bootstrap')">Bootstrap</div>
+            <div onclick="show('ReactJS')">ReactJS</div>
+            
+        </div>
+    </div>
+    <script>
+        function show(word){
+            document.querySelector('.textbox').value=word;
+        }
+        let dropdown = document.querySelector('.dropdown');
+        dropdown.onclick=function(){
+            dropdown.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
